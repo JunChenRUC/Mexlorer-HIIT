@@ -53,13 +53,10 @@ public class GEM {
 			}
 		}
 		
-		ArrayList<Entity> resultEntityList = new QuickSort<Entity>().getSorted(new ArrayList<Entity>(entityMap.values()), DataManager.output_size_entity);
-		
-		return resultEntityList;
+		return filter(queryEntityList, queryFeatureList, entityMap);
 	}
 	
 	private ArrayList<Entity> filter(ArrayList<Entity> queryEntityList, ArrayList<Feature> queryFeatureList, HashMap<Integer, Entity> entityMap){
-
 		for(Entity queryEntity : queryEntityList)		
 			entityMap.remove(queryEntity.getId());
 		for(Feature queryFeature : queryFeatureList)		
