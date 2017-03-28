@@ -29,8 +29,8 @@ public class Test {
 		long beginTime = System.currentTimeMillis();
 		
 		ArrayList<String> queryStringList = new ArrayList<>();
-		queryStringList.add("forrest gump");
-		queryStringList.add("category:films whose director won the best director academy award_subject_1");
+		queryStringList.add("1##forrest gump");
+		queryStringList.add("1##category:films whose director won the best director academy award_subject_1");
 		
 		Result result = null;
 		result = gem.getResult(queryParser.parseQueryEntity(queryStringList), queryParser.parseQueryFeature(queryStringList));
